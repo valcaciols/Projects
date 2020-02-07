@@ -1,0 +1,60 @@
+﻿@model IEnumerable<SFCTest.Models.RoutingGroup>
+
+@{
+    ViewBag.Title = "Index";
+    
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { id = ViewData["IDProduct"] })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Product.ProductModel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StationGroup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassGroup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FailGroup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.ProductModel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StationGroup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PassGroup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FailGroup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IDRoutingStation }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IDRoutingStation })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@Html.ActionLink("Back to List", "Index","Products")
