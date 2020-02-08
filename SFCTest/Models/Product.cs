@@ -8,6 +8,7 @@ namespace SFCTest.Models
 {
     public class Product
     {
+        //
         [Key]
         public int IDProduct { get; set; }
         public string ProductModel { get; set; }
