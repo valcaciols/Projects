@@ -16,6 +16,7 @@ namespace SFCTest.DAL
 
         public DbSet<Product> Products { get; set; }
         public DbSet<RoutingGroup> RoutingGroups { get; set; }
+        public DbSet<StationGroup> StationGroups { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

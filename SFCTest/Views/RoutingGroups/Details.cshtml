@@ -1,0 +1,59 @@
+﻿@model SFCTest.Models.RoutingGroup
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RoutingGroup</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.ProductModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Station")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Station.STATION_GROUP_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("StationPass")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassStation.STATION_GROUP_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("StationFail")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FailStation.STATION_GROUP_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDRoutingStation }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
